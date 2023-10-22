@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <style>
+    
+        body{
+          margin: 100 auto;
+          font-family: Cambria, 'Times New Roman';
+            text-align: center;
+        }
+        .Main{
+            height: 430px;
+            width: 1300px;
+            background: gray;
+            margin: 100px auto;
+            border-radius: 10px;
+            font-size: 22px;
+            padding-left: 15px;
+        }
+        .button1,
+        .button,
+        .med,
+        .med-sm,
+        .large,
+        .medium,
+        .spacebar
+        {
+            border: 2px solid black;
+            background: whitesmoke;
+            border-radius: 10px;
+            line-height: 56px;
+            float: left;
+            margin: 5px;
+        }
+        .row{
+            width: 1300px;
+            height: 70px;
+        }
+        .row1{
+            width: 1300px;
+            height: 45px;
+            padding-top: 5px;
+        }
+        .medium {
+            height: 56px;
+            width: 135px;
+        }
+        .button {
+            /* width: 74.3px;
+            height: 56px; */
+            width: 69px;
+            height: 56px;
+        }
+
+        .button1 {
+            width: 66px;
+            height: 45px;
+        }
+        .med {
+            /* height: 56px;
+            width: 135px; */
+            height: 45px;
+            width: 80px;
+        }
+        .large {
+            height: 56px;
+            width: 175px;
+        }
+        .spacebar {
+            height: 56px;
+            width: 440px;
+            background: lightgray;
+        }
+        .row-inner {
+            width: 78.3px;
+            height: 28px;
+            line-height: normal;
+        }
+        .med-sm {
+            height: 56px;
+            width: 115px;
+        }
+        button{
+            width:150px;
+            height:60px;
+            font-size:25px;
+            border-radius:30px;
+            outline:none;
+            background-image:linear-gradient(to right,#f00f5e,#b40ff0);
+            border-image:linear-gradient(to right,#f00f5e,#b40ff0);
+	   }
+     #inputField {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc; 
+      caret-color: black; 
+    }
+    </style>
+</head>
+<body>
+  <nav>
+    <a class='home' href='/index.html' aria-current="page">Home</a>
+    <a target="_blank" href="https://www.youtube.com/@perminuteknowledge">Youtube channel</a>
+  </nav>
+
+  <input type="text" id="inputField" style="margin-top: 20px; padding: 10px; font-size: 18px;" readonly>
+  
+    <div class="Main">
+
+        <div class="row1">
+            <div class="med">Esc</div>
+            <div class="button1">F1</div>
+            <div class="button1">F2</div>
+            <div class="button1">F3</div>
+            <div class="button1">F4</div>
+            <div class="button1">F5</div>
+            <div class="button1">F6</div>
+            <div class="button1">F7</div>
+            <div class="button1">F8</div>
+            <div class="button1">F9</div>
+            <div class="button1">F10</div>
+            <div class="button1">F11</div>
+            <div class="button1">F12</div>
+            <div class="button1">insert</div>
+            <div class="button1">ptr sc</div>
+            <div class="button1">delete</div>
+        </div>
+        <div class="row">
+            <div class="button">`</div>
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+            <div class="button">0</div>
+            <div class="button">-</div>
+            <div class="button">+</div>
+            <div class="med-sm">backspace</div>
+            <div class="button">home</div>
+
+        </div>
+        <div class="row">
+            <div class="med-sm">tab</div>
+            <div class="button">Q</div>
+            <div class="button">W</div>
+            <div class="button">E</div>
+            <div class="button">R</div>
+            <div class="button">T</div>
+            <div class="button">Y</div>
+            <div class="button">U</div>
+            <div class="button">I</div>
+            <div class="button">O</div>
+            <div class="button">P</div>
+            <div class="button">[</div>
+            <div class="button">]</div>
+            <div class="button">\</div>
+            <div class="button">pg up</div>
+        </div>
+        <div class="row">
+            <div class="medium">caps lock</div>
+            <div class="button">A</div>
+            <div class="button">S</div>
+            <div class="button">D</div>
+            <div class="button">F</div>
+            <div class="button">G</div>
+            <div class="button">H</div>
+            <div class="button">J</div>
+            <div class="button">K</div>
+            <div class="button">L</div>
+            <div class="button">;</div>
+            <div class="button">'</div>
+            <div class="medium">enter</div>
+            <div class="button">pg dn</div>
+
+        </div>
+        <div class="row">
+            <div class="large">shift</div>
+            <div class="button">Z</div>
+            <div class="button">X</div>
+            <div class="button">C</div>
+            <div class="button">V</div>
+            <div class="button">B</div>
+            <div class="button">N</div>
+            <div class="button">M</div>
+            <div class="button">,</div>
+            <div class="button">.</div>
+            <div class="button">/</div>
+            <div class="large">shift</div>
+            <div class="button">end</div>
+
+        </div>
+        <div class="row">
+            
+            <div class="button">ctrl</div>
+            <div class="button">fn</div>
+            <div class="button">option</div>
+            <div class="med-sm">alt</div>
+            <div class="spacebar"></div>
+            <div class="med-sm">alt</div>
+            <div class="button">ctrl</div>
+            <div class="button">&larr;</div>
+            <div class="button">
+                <div class="row-inner" style="border-bottom: 2px solid gray;">&uarr;</div>
+                <div class="row-inner">&darr;</div>
+            </div>
+            <div class="button">&rarr;</div>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

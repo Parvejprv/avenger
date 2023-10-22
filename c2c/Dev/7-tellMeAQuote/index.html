@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Montez&family=Rye&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montez&family=Rye&display=swap" rel="stylesheet">
+  <title>Quotable world!</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!--navbar-->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="box">
+      <!-- title -->
+      <div class="title"><span class="jokes" for="jokes"><span for="j" class="j">Q</span>uotes</span></div>
+      <!-- content -->
+      <div class="content">
+        <!-- card  -->
+        <div class="card">
+          <div class="titleText">
+            <span class="infoText">Topics:</span>
+            <p id="topicsText">Life, people</p>
+          </div>
+          <div class="quoteText">
+            <p id="quoteText">People are afraid by their curse, not by their actions. </p>
+          </div>
+          <div class="infoAuth">
+            <div class="infoAuthL">
+              <span class="infoText" style="color: blue;">Author:</span>
+              <p id="authorText">Parvej Alam</p>
+            </div>
+            <div class="infoAuthR">
+              <span class="infoText" style="color:blue;">Profession:</span>
+              <p id="professionText">Software engineer</p>
+            </div>
+          </div>
+        </div>
+        <span class="guide"><span id="msg">Click the button to get the Random <b style="color: red; ">Quotes</b></span>
+        </span>
+        <div class="btn"><button id="getRandomQoute" class="getRandomQoute" onclick="getRandomQuote()"> Get Random
+          </button> </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
