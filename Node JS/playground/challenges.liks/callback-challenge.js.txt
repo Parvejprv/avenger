@@ -1,0 +1,45 @@
+// Task. 00
+//
+// Goal to print the dynamic value comming from the api
+//
+// 1. Fire of a new request to the URL explored
+// 2. Have the request module parse it as JSON, also you can use the attribute of request
+// 3. Print both the temperature and temp feelslike and print the precip i.e. chance of rain
+// 4. Test your work
+// 5. Print the your work through console
+
+// Task. 01
+// -----------
+// Goal:  Print the lat and long for the las angeles
+//
+// 1. Fire of a new request to the URL explored
+// 2. Have the request module parse it as JSON
+// 3. Print both the latitude and longitude to the terrminal
+// 4. Test your work
+
+
+
+// Task. 03
+
+// Goal: Handle errors for geocoding request
+
+// 1. Set an error handler for low-level errors
+// 2. Test by disabling networkrequest and returning the app
+// 3. Setup error handling for no matching result
+// 4. Test by alternating the search term and running the app
+
+
+
+
+// Task. 04
+//
+// Goal: Mess around with the callback pattern
+//
+// 1. Define an add function that accepts the correct arguments
+// 2. Use setTimeout to simulate a 2 second delay
+// 3. After 2 seconds are up, call the callback function with the sum
+// 4. Test your work!
+
+add(1, 4, (sum) => {
+    console.log(sum) // Should print: 5
+})

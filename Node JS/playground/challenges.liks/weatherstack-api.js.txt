@@ -1,0 +1,26 @@
+
+// const url = 'http://api.weatherstack.com/current?access_key=24283d8352e1b686433cf77086702550&query=&units=f'
+// const url = 'http://api.weatherstack.com/current?access_key=24283d8352e1b686433cf77086702550&query=37.8867,-122.411'
+
+
+// request({url : url, json: true }, (error, response) => {
+//   if(error) {
+//     console.log('Unable to connect to weather service!')
+//   } else if (response.body.error) {
+//     console.log('Unable to find location')
+//   } else {
+//     console.log(response.body.current.weather_descriptions[0] + ". Temperature in degree currently is " + response.body.current.temperature + " feel out. It feels like " + response.body.current.feelslike + " degree out. There is a " + response.body.current.precip + " % chance of rain.")
+//   }
+// })
+
+/* 
+******************************************************************************************************
+request({url : url, json: true }, (error, response) => {
+  const data = JSON.parse(response.body)
+  console.log(data.current)
+  console.log(response.body.current)               // -> json : true
+  console.log(response.body.current.weather_descriptions[0] + ". Temperature in degree currently is " + response.body.current.temperature + " feel out. It feels like " + response.body.current.feelslike + " degree out. There is a " + response.body.current.precip + " % chance of rain.")
+  
+})
+*******************************************************************************************************
+*/

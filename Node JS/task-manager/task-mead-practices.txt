@@ -1,0 +1,357 @@
+
+
+
+
+
+
+
+
+
+
+
+
+// 4.
+
+
+
+
+// Goal : Setup the task reading endpoints
+//
+// 1. Create an endpoint for fetching all tasks
+// 2. Create an endpoint for fetching a task by its id
+// 3. Setup new requests in Postman and test your work
+
+
+app.get('/tasks', (req, res) => {
+  Task.find({}).then((tasks) => {
+    res.send(tasks)
+  })
+  .catch((e) => {
+    res.status(500).send()
+  })
+})
+
+app.get('/tasks/:id', (req, res) => {
+  const _id = req.params.id
+
+  Task.findById(_id).then((task) => {
+    if(!task) {
+      return res.status(404).send()
+    }
+    res.send(task)
+  })
+  .catch((e)=>{
+    res.status(500).send()
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 3.
+// Asking
+-----------
+// Goal : Setup the task creation endpoint
+//
+// 1. Create a separate file for the task model (load it into index.js)
+// 2. Create a task creation endpoint (handle success and error)
+// 3. Test the endpoint from postman with good and bad data
+// 
+
+app.post('/tasks', (req, res) => {
+  const task = new Task(req.body)
+
+  task.save().then(() => {
+    res.status(201).send(task)
+  })
+  .catch((e) => {
+    res.status(400).send(e)
+  })
+})
+
+// Ans
+-------
+const mongoose = require('mongoose')
+
+// model for Tasks
+const Task = mongoose.model('Task', {
+  description : {
+    type : String,
+    required: true,
+    trim : true
+  },
+  completed : {
+    type : Boolean,
+    default : false
+  }
+})
+
+module.exports = Task
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2.
+//
+// Goal : Add a password field to User
+//
+// 1. Setup the field as required String
+// 2. Ensure that the length is greater than 6
+// 3. Trim the password
+// 4. Ensure that your password does not contain 'password'
+// 5. Test your work
+
+
+// // 2
+// const mongoose = require("mongoose");
+// const validator = require("validator");
+
+// // connect with server
+// mongoose.connect("mongodb://127.0.0.1:27017/task-manager", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+
+// //
+// // Goal : Add a password field to User
+// //
+// // 1. Setup the field as required String
+// // 2. Ensure that the length is greater than 6
+// // 3. Trim the password
+// // 4. Ensure that your password does not contain 'password'
+// // 5. Test your work
+
+
+// // model for User
+// let User = mongoose.model("User", {
+//   name: {
+//     type: String,
+//     required : true,
+//     trim : true
+    
+//   },
+//   email : {
+//     type : String,
+//     required : true,
+//     lowercase : true,
+//     validate(value) {
+//       if(!validator.isEmail(value)) {
+//         throw new Error('Email is invalid')
+//       }
+//     }
+//   },
+//   password : {
+//     type : String,
+//     required : true,
+//     minlength : 7,
+//     trim : true,
+//     validate (value){
+//       if(value.toLowerCase().includes('password')) {
+//         throw new Error ("Password cannot contain 'password'");
+//       }
+//     }
+
+//   },
+//   age: {
+//     type: Number,
+//     default : 0,
+//     validate(value) {
+//       if(value < 0) {
+//         throw new Error('Age must be a positive number')
+//       }
+//     }
+//   }
+// });
+
+// /*********************** create a new instance of User model and save that model*********************/
+// // const me = new User({
+// //   name :  "    Athiya    ",
+// //   email : 'Athiya@Test.com',
+// //   password : 'Phone8'
+// // });
+
+// // /* ******Save the model****** */
+// // me.save()
+// //   .then(() => {
+// //     console.log(me);
+// //   })
+// //   .catch((error) => {
+// //     console.log("error!", error);
+// //   });
+
+
+
+
+
+
+
+
+
+
+// 1.
+  Goal : Create a model for tasks
+
+  1. Define the model with description and Boolean value
+  2. Create a new instance of the model
+  3. Save the model to the database
+  4. Test your work
+
+
+
+// // model for Tasks
+// const Task = mongoose.model('Task', {
+//   description : {
+//     type : String,
+//     required: true,
+//     trim : true
+//   },
+//   completed : {
+//     type : Boolean,
+//     default : false
+//   }
+// })
+
+// // instances of the model
+// const task = new Task({
+//   description : "Learning Mongoose"
+// })
+
+
+// // Now, save the instance
+// task.save().then(()=> {
+//   console.log(task)
+// })
+// .catch((error) => {
+//   console.log(`Error! ${error}`)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1.
+
+
+// const mongoose = require("mongoose");
+
+// // connect with server
+// mongoose.connect("mongodb://127.0.0.1:27017/task-manager", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+
+// // model for User
+// let User = mongoose.model("User", {
+//   name: {
+//     type: String,
+//   },
+//   age: {
+//     type: Number,
+//   },
+// });
+
+// /*********************** create a new instance of User model and save that model*********************/
+// // const me = new User({
+// //   name: "Samrat",
+// //   age: 25,
+// // });
+
+// /* ******Save the model****** */
+// // me.save()
+// //   .then(() => {
+// //     console.log(me);
+// //   })
+// //   .catch((error) => {
+// //     console.log("error!", error);
+// //   });
+
+
+
+
+// // Goal : Create a model for tasks
+
+// // 1. Define the model with description and Boolean value completed
+// // 2. Create a new instance of the model
+// // 3. Save the model to the database
+// // 4. Test your work
+
+
+
+// // model for Tasks
+// const Task = mongoose.model('Task', {
+//   description : {
+//     type : String
+//   },
+//   completed : {
+//     type : Boolean
+//   }
+// })
+
+// // instances of the model
+// const task = new Task({
+//   description : 'Learn the Mongoose library',
+//   completed: false
+// })
+
+
+// // Now, save the instance
+// task.save().then(()=> {
+//   console.log(task)
+// })
+// .catch((error) => {
+//   console.log(`Error! ${error}`)
+// })
+

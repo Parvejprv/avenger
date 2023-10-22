@@ -1,0 +1,25 @@
+// Geocoding
+// Address -> Lat/Long -> Weather
+
+// 
+// Goal:  Print the lat and long for the las angeles
+//
+// 1. Fire of a new request to the URL explored
+// 2. Have the request module parse it as JSON
+// 3. Print both the latitude and longitude to the terrminal
+// 4. Test your work
+
+
+// const geocodeURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic2FtcmF0LTA4MTA1NyIsImEiOiJjbGxodjRqZ2cwZWMwM2R0NjltaW1lYXh4In0.1M6eMqa8Zc29ieFTPER6Cw&limit=1';
+
+// request ( { url : geocodeURL, json: true }, (error, response) => {
+//   if(error) {
+//     console.log('Unable to connect to location services!')
+//   } else if(response.body.features.length === 0) {
+//     console.log('Unable to find loaction, Try another search. ')
+//   } 
+//   const latitude = response.body.features[0].center[1];
+//   const longitude = response.body.features[0].center[0];
+//   console.log('lattitude and longitude : ' + latitude, longitude)
+
+// })

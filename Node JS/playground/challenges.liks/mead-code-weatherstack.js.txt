@@ -1,0 +1,13 @@
+// MEAD
+// const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json/access_token=KEY&limit=1'
+
+// request({ url: geocodeUrl, json: true }, (error, response) => {
+//   if(error){
+//     console.log('Unable to connect to location services!')
+//   }else if(response.body.features.length  === 0) {
+//     console.log('Unable to Find location. Try another search.')
+//   }
+//   const latitude = response.body.features[0].center[1]
+//   const longitude = response.body.features[0].center[0]
+//   console.log(longitude, latitude)
+// })

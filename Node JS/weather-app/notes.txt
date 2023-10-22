@@ -1,0 +1,41 @@
+console.log('Starting')       // exec
+
+setTimeout(()=>{
+  console.log('2 second Timer')
+}, 2000)
+
+// setTimeout(()=>{
+//   console.log('0 second Timer')
+// }, 0)
+
+
+
+console.log('Stopping')
+
+
+
+
+const request = require('request')
+
+const url = 'https://api.weatherapi.com/v1/current.json?key=051ba79ed1cc4e3ab6551110230608&q=lucknow'
+
+
+request({url : url, json: true}, (error, response) => {
+  const data = JSON.parse(response.body)
+  console.log(data.current)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// Geocoding api
+// address -> temp
+
