@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/error-404.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>404 Page Not Found</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="err404">{{title}}</h1>
+     <img src="/img/404.jpg" alt="Robot" class="robot-image"/>
+    <p>{{ errorMsg }}</p>
+    <a href="/" class="btn">Go Back Home</a>
+  </div>
+  
+  {{> footer }}
+  <script src="./src/error-404.js"></script>
+</body>
+</html>
