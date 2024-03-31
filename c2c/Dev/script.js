@@ -1,1 +1,0 @@
-console.log('Hello! we are learning here to build the project on the based on the HTML CSS and JavaScript level.');
