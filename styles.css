@@ -44,9 +44,13 @@ h1 {
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .project-link {
+  height: 4.5vh;
+  width: 100vh;
+  align-content: center;  /* align-content : it align height wise */
   background-color: #fff;
   padding: 10px 30px;
   border-radius: 8px;
