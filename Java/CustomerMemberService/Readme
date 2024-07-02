@@ -1,8 +1,8 @@
-<h1>CellPhone Customer Services</h1>
+## CellPhone Customer Services
 
 
 
-<p>/*
+/*
   Challange:-  Customer and Member 
   =================================
   This is the challenges for Designing a class with inheritance, where Customer of a CellPhone has some features and services. 
@@ -17,5 +17,4 @@
 
 Note: Wrtite class for CellPhone, SmartPhone, Customer, and Member ( Let suppose if a customer is a permanent customer he may consider as member and they offers most of feature from our side.
 */
-</p>
 
