@@ -1,8 +1,8 @@
+// package bankingsystem;
 /*
     Challenge:- Banking System 
 */
 
-package bankingsystem;
 
 import java.util.Scanner;
 
@@ -179,8 +179,8 @@ public class BankingSystem {
             System.out.println("\n6.  Liquidate Fixed Deposit");
             System.out.println("\n7.  Pay EMI for Loan Account");
             System.out.println("\n8.  Top Up Loan Account");
-            System.out.println("\n9.  Desplay Saving Account Details");
-            System.out.println("\n10. Desplay Loan Account Details");
+            System.out.println("\n9.  Display Saving Account Details");
+            System.out.println("\n10. Display Loan Account Details");
             System.out.println("\n11. Exit");
             System.out.println("\nChoose an option: ");
 
