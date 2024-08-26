@@ -1,0 +1,363 @@
+
+React JS
+=============
+
+Introduction
+---------------
+- React is a JavaScript library for building user interfaces. It's a popular choice for web development, especially for building reusable UI components.
+- React is used to build single-page applications.
+- React allows us to create and used to build reusable UI components.
+- React is free and open source library.
+
+
+
+
+What is React?
+----------------
+React is a declarative, efficient and flexible JavaScript library for building user interface. It lets you compose complex UIs from small and isolated pieces of code called "components".
+
+React is sometimes referred as a frontend JavaScript framework, is a JavaScript library created by facebook.
+
+React does it works in catagorized manner.
+
+React is a tool for building UI components.
+
+React is a view library, not a full-fledged framework. It doesn't handle routing, state management etc.
+
+React community also provides advanced concept like state management, routing etc on top of the Reat library.
+
+
+How does React works?
+----------------------------
+- React creates a virtual DOM in memory.
+- When the state of the application changes, React updates the virtual DOM.
+- React create and then compares the virtual DOM with the real DOM and makes the necessary changes to the real DOM/browser DOM.
+- React uses a concept called "one-way data binding" or "unidirectional data flow"
+
+
+React JS History.
+-----------------
+React JS was first used in 2011 for facebook newsfeed feature.
+Initial released to the public (V0.3.0) was in July 2013.
+React was first used in production in 2013.
+React was first released in 2013 by Facebook. It was created by "Jordan Walke", a Facebook engineer. React was initially called "FaxJS" but later renamed to React.
+
+
+Application:
+---------------
+Few popular websites powered by React library are listed below-
+Facebook, popular social media application
+Instagram, popular social media application
+Netflix, popular media streaming application
+Code Academy, popular online training application
+Reddit, popular content sharing application
+
+
+Why Shoudl we use React?
+---------------------------
+- React has a large community on github.
+- Component based architecture
+- Easy to learn and use
+- DOM updates are handled very easily and effectively.
+- Declarative approach
+
+
+Declarative approach
+---------------------------
+- You tell the browser exctly what to do, isntead of telling it what you need. The React declarative approach abstracts that for us.
+- With declarative code, we tell JavaScript what we want to be done, and let JavaScript take care of performing the steps. 
+
+
+
+
+
+
+
+
+Lecture 2. 
+
+JavaScript:-
+--------------
+JavaScript is developed by Brenden Eich in 1995 at netscape.
+
+
+ECMA International (European Computer Manufacturers Association)
+-------------------
+- ECMA International is a non-profit organization that develops and maintains the ECMAScript standard. The ECMA Script standard is the standard for JavaScript. 
+- The ECMAScript standard is maintained by ECMA International in 1997 .
+- ECMAScript is the official name of the JavaScript language.
+
+
+History of JavaScript:
+---------------------------
+JavaScript (1995)       
+Brenden Eich   
+Netscape
+
+
+(got standardized)
+
+=>     ECMA International (1997) 
+
+
+=>     ECMAScript (ES1) (1997)
+
+
+
+
+
+
+ECMAScript Version
+-------------------
+ECMAScript 1 (ES1) (1997)     first edition
+ECMAScript 2 (ES2) (1998)     Editorial changes
+ECMAScript 3 (ES3) (1999)     Added regular expression
+                              Added try catch, Added switch case, Added do-while
+
+ECMAScript 4 (ES4) (2007)     Cancelled | Never released
+
+ECMAScript 5 (ES5) (2009)     Added strict mode, Added JSON
+                              Added String.trim()
+                              Added Array.isArray()
+                              Added Array iteration methods
+                              Allows trailling commands for object literals. (64 changes)
+
+ECMAScript 6 (ES6) (2015)     Added classes, Added let and                           const, var
+                              Added arrow functions, Added template strings 
+                              Added promises, Added async/await
+                              Added Map, Set, WeakMap, WeakSet
+                              Added Symbol, Added Proxy
+                              Added Reflect
+ECMAScript 7 (ES7) (2016)     Added exponentiation operator (**)
+                              Added includes() method for arrays
+                              Added Array.prototype.entries() and Array.prototype.keys()
+                              Added Array.prototype.values()
+
+ECMAScript 8 (ES8) (2017)     Added Object.values() and Object
+.entries()
+                              Added async/await with try/catch
+                              Added Atomics and SharedArrayBuffer
+ECMAScript 9 (ES9) (2018)     Added trimStart() and trim
+                              End of History of JavaScript
+
+
+
+What is Babel in React?
+========================
+- Babel is a JavaScript compiler
+- It converts modern JavaScript code into older syntax that can be run in older browsers or environments that don't support the latest JavaScript features.
+- It is mainly used to convert ECMAScript 2015+ code into a backwards compatibale version of JavaScriptin current and plder browsers or environments.
+- When we create an app by using "create-react-app", then babel automatically included in our react app.
+- Babel is used to convert modern JavaScript code into older syntax that can be run in older browsers.
+- Babel can convert JSX syntax.
+
+
+
+
+
+
+React JS - Lecture 3
+=====================
+Downloading and Installing Visual studion code | Install VS Code Extension
+
+
+
+
+# to create a react-app
+npx create-react-app my-app
+# to start the app
+npm start
+
+Note: this will open our application within a browser with default port 3000.
+
+
+
+The Render Function:
+-------------------------
+- The purpose of render function is to display the code inside the specified HTML
+
+
+
+
+
+
+Lecture 6. What is JSX? Why we use JSX in React?
+=====================================================
+JSX is a syntax extension for JavaScript. It allows you to write HTML in your JavaScript files.
+
+Notice: We often write the function like this in JavaScript-
+
+1). 
+function Show(){
+  document.write("<h1>Hey Wassup</h1>");
+}
+
+2). 
+function Show(){
+  var h1 = document.createElement("h1");
+  h1.innerHTML = "Hey Wassup";
+  document.body.appendChild(h1);
+}
+
+3). 
+function Show(){
+  var a = 10;
+  var b = 20;
+  var c = a + b;
+  return c;
+}
+
+
+JSX
+----
+function Show() {
+  return 
+  <div>
+    <h1>Hey Learner</h1>
+    <h1>Welcome to the React course.</h1>
+  </div>
+}
+
+
+What is JSX?
+----------------
+JSX stands for JavaScript XML.
+JSX is a syntax extension for JavaScript.
+JSX allows you to write HTML in your JavaScript files.
+JSX is not a separate language, but a syntax extension for JavaScript.
+JSX makes it easier to write and add HTML in React.
+
+you are not require to use JSX makes it easier to write React appliacions.
+ 
+
+Expression in JSX:
+--------------------
+- With JSX you can write expression inside curly braces{}.
+- The expression can be React variable, or property, or object or any other valid JavaScript expression. JSX will execute the expression and return the result.
+
+/*
+
+import logo from './logo.svg';
+import './App.css';
+
+
+let name = "Parvej Alam Ansari";
+const cars = {name: "Corola XLI", color: "white", build: "2008"}
+
+function App() {
+  return (
+    <div className="App">
+      <h1> {name} </h1>
+      <h1>Learning Never Ends.</h1>
+      <h1> {cars.name} </h1>
+      <h1> {cars.color} </h1>
+      <h1> {cars.build} </h1>
+    </div>
+  );
+}
+
+export default App;
+
+*/
+
+
+Note:- 
+- JSX will return the only single element only, it would not return the more than one element.
+- So if you like to write two paragraph, you msust put inside a parent element, like "div" element.
+- JSX will throw an error if the HTML ie not correct, or if HTML misses a parent element.
+- Alternatively you can use the fragment to wrap multiple lines . This will prevent unncessary adding extra nodes of the DOM.
+- A fragment looks like an empty HTML tag: <></>
+
+
+
+2). to do so, we use the fragment to return the more than one elements
+
+syntax:
+<></>     - fragments
+
+
+Example:-
+----------
+let name = "Parvej Alam Ansari";
+const cars = {name: "Corola XLI", color: "white", build: "2008"}
+
+function App() {
+  return (
+    <>
+    <h1>Hey This is Your React Tutor</h1>
+    <div className="App">
+      <h1> {name} </h1>
+      <h1>Learning Never Ends.</h1>
+      <h1> {cars.name} </h1>
+      <h1> {cars.color} </h1>
+      <h1> {cars.build} </h1>
+    </div>
+    </>
+  );
+}
+
+
+
+Conditions in React and JSX Or Ternary Operator in JSX
+--------------------------------------------------------
+
+let a = 10;
+let msg = "";
+if(a > 15) {
+  msg = "Hello";
+} else {
+  msg = "Bye";
+}
+
+function App() {
+  return (
+    <div className="App">
+    <h1> {msg} </h1>
+    <h1> { (a > 5) ? "Hello Sir" : "Hello Students" } </h1>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+
+Note: For evaluation or test|expression purpose we may use the if-else Conditions outside the JSX but yes we can put the ternary operator inside the JSX 
+
+
+
+
+
+
+React  components:
+-------------------
+components are independent and reusable pieces of code.
+They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+Components come in two types,
+1. Class components
+2. Functional components
+
+1. Functional components
+---------------------------
+- Components are like functions that return HTML.
+- In older React code bases, you may find Class components primarily used.
+- It is suggested to use Function components were added in Ract 16.8.
+
+
+
+
+
+
+
