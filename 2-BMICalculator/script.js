@@ -2,6 +2,9 @@ const heightInput = document.getElementById('height');
 const weightInput = document.getElementById('weight');
 const calculateButton = document.getElementById('btn'); // Updated to select the button with the id "btn"
 const resultDiv = document.getElementById('results');
+const bmiValueSpan = document.getElementById('bmi-value');
+const bmiStatusSpan = document.getElementById('bmi-status');
+
 
 // Function to calculate the BMI
 let calculateBMI = (event) => {
@@ -13,8 +16,8 @@ let calculateBMI = (event) => {
 
   // Check if the input fields are empty
   if (heightValue === '' || weightValue === '') {
-    resultDiv.style.color = "red";
-    resultDiv.innerHTML = 'Please enter valid height and weight.';
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = '<p style="color: red;">Please enter valid height and weight.</p>';
     return;
   }
 
@@ -24,8 +27,8 @@ let calculateBMI = (event) => {
 
   // Check if inputs are valid numbers
   if (isNaN(height) || isNaN(weight)) {
-    resultDiv.style.color = "red";
-    resultDiv.innerHTML = 'Please enter valid height and weight.';
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = '<p style="color: red;">Please enter valid height and weight.</p>';
     return;
   }
 
@@ -35,18 +38,29 @@ let calculateBMI = (event) => {
 
   // Determine the weight category
   let weightCategory = '';
+  let weightClass = '';
+
   if (bmi < 18.6) {
     weightCategory = 'Under Weight';
+    weightClass = 'underweight';
   } else if (bmi >= 18.6 && bmi <= 24.9) {
     weightCategory = 'Normal Weight';
+    weightClass = 'normal';
   } else {
     weightCategory = 'Overweight';
+    weightClass = 'overweight';
   }
 
-  resultDiv.innerHTML = `Your BMI is: ${bmi.toFixed(2)}<br>Category: ${weightCategory}`;
+
+  // Update the BMI results in result section
+  bmiValueSpan.textContent = bmi.toFixed(2);
+  bmiStatusSpan.innerHTML = `<span class="${weightClass}">${weightCategory}</span>`;
+
+  // resultDiv.innerHTML = `Your BMI is: ${bmi.toFixed(2)}<br>Category: ${weightCategory}`;
+  resultDiv.classList.remove('hidden');
 
 
-  // Clear the input field values
+  // // Clear the input field values
   heightValue = '';
   weightValue = '';
 }
