@@ -3,18 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Portfolio | Parvej Alam</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css"/>
-  <script type="module" src="script.js"></script>
 </head>
 <body>
+
+  <header>
+    <div class="logo">
+      <h1><a href="/index.html">Parvej Alam</a></h1>
+    </div>
+    <div class="nav">
+      <ul class="navbar">
+        <li class="item"><a href="/index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li class="item"><a href="./sign-up.html"><i class="fa fa-user-plus"></i> Resume</a></li>
+        <!-- <li class="item"><a href="#"><i class="fa fa-server"></i> Services</a></li> -->
+        <li class="item"><a href="#"><i class="fa fa-solid fa-address-book"></i> Projects</a></li>
+        <li class="item"><a href="#"><i class="fa fa-info-circle"></i> About</a></li>
+        <li class="item"><a href="#"><i class="fa fa-envelope"></i> Contact us</a></li>
+        <!-- <li class="item"><a href="#"><i class="fa fa-star"></i> Reviews</a></li> -->
+      </ul>
+    </div>
+  </header>
+
   <nav>
-    <a href="/avenger/index.html" aria-current="page">Home</a>
-    <a href="https://www.youtube.com/@perminuteknowledge" target="_blank">Youtube channel</a>
+    <!-- <a href="/avenger/index.html" aria-current="page">Home</a> -->
+    <!-- <a href="https://www.youtube.com/@perminuteknowledge" target="_blank">Youtube channel</a> -->
   </nav>
 
   <main>
-    <h1>Per Minute Knowledge</h1>
+    <h1>Projects</h1>
     <div class="projects">
       <a href="./1-colorChanger/index.html" class="project-link">Project One - color Changer 🎨</a>
       <a href="./2-BMICalculator/index.html" class="project-link">Project Two - BMICalculator 🀄</a>
@@ -26,6 +45,49 @@
       <a href="./8-LandingPage/index.html" class="project-link">Project Eight - Landing Page 🔥</a>
     </div>
   </main>
+
+  <!-- footer section -->
+  <footer>
+    <div class="handles">
+      <div id="handle-section-left">
+        <div class="social-media-header">
+          <h6>Social Links</h6>
+        </div>
+        <div class="social-media">
+          <a href="https://www.twitter.com/" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.telegram.org/" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://www.linkedin.in/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div id="handle-section-right">
+        <div class="email-contact-header">
+          <h6>Contact</h6>
+        </div>
+        <div class="email-and-contacts">
+          <p id="email"><i class="fa-solid fa-at"></i> cipher2code@gmail.com</p> <br>
+          <p id="phone"><i class="fa-solid fa-phone"></i> +91 8765432100</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- copyright -->
+    <div id="copyright">
+      Copyright Ⓒ 2024 &nbsp;<label for="company-name" id="company-name"> <a href="#"><strong>C2C</strong></a>, All Rights Reserved.</label>&nbsp;| Developed By &nbsp;<label for="developer" id="developer"><a href="#"><strong>Parvej Alam</strong></a></label>
+    </div>
+  </footer>
   
+  <script type="module" src="script.js"></script>
 </body>
 </html>
